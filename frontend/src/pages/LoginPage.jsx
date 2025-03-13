@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { userAuthStore } from '../store/useAuthStore';
+import { useAuthStore } from '../store/useAuthStore';
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AuthImagePattern from '../components/AuthImagePattern';
@@ -11,7 +11,7 @@ const LoginPage = () => {
     email: "",
     password: ""
   })
-  const { login, isLoggingIn } = userAuthStore();
+  const { login, isLoggingIn } = useAuthStore();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
